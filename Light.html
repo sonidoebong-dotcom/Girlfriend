@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Light Switch ON/OFF</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Light.css">
+</head>
+<body>
+
+    <!-- BACKGROUND AND LIGHT BULB -->
+    <div class="bg-bomb">
+        <img
+            id="Light_img"
+            src="audioandimages/Bomb.jpg"
+            class="light_off"
+            alt="Light Bulb OFF"
+        >
+    </div>
+
+    <!-- LIGHT SWITCH -->
+    <div class="switch" id="switch">
+        <div class="btn"></div>
+
+        <span class="light_on_status">ON</span>
+        <span class="light_off_status">OFF</span>
+    </div>
+
+    <!-- AUDIO EFFECTS -->
+    <audio id="audio" src="audioandimages/button.mp3" preload="auto"></audio>
+
+    <audio id="light_hum" src="audioandimages/light-hum.mp3" preload="auto" loop></audio>
+
+    <!-- JAVASCRIPT -->
+    <script src="Light.js"></script>
+
+</body>
+</html>

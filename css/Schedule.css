@@ -1,0 +1,149 @@
+/* Background */
+body {
+    background: url('../images/ocean.jpg') center/cover fixed;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Dark Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+/* Hero Section */
+.schedule-hero {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(20,20,20,0.75);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,255,255,.2);
+}
+
+.schedule-hero h1 {
+    font-size: 3rem;
+    color: #00e5ff;
+    text-shadow: 0 0 15px #00e5ff;
+    margin-bottom: 15px;
+}
+
+.schedule-hero p {
+    font-size: 1.1rem;
+    color: #d9d9d9;
+}
+
+/* Table Container */
+.schedule-container {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(20,20,20,0.80);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,255,255,.15);
+    overflow-x: auto;
+}
+
+/* Table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule-table th {
+    background: rgba(0,229,255,.15);
+    color: #00e5ff;
+    font-size: 1rem;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.schedule-table td {
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,.12);
+    color: white;
+}
+
+.schedule-table tr:hover td {
+    background: rgba(255,255,255,.05);
+}
+
+/* Subject Colors */
+
+.fil {
+    background: #ff6b6b;
+    color: white;
+    font-weight: bold;
+}
+
+.cis {
+    background: #00bcd4;
+    color: white;
+    font-weight: bold;
+}
+
+.it {
+    background: #8e44ad;
+    color: white;
+    font-weight: bold;
+}
+
+.cs {
+    background: #2ecc71;
+    color: white;
+    font-weight: bold;
+}
+
+.ss {
+    background: #f39c12;
+    color: white;
+    font-weight: bold;
+}
+
+.path-fit {
+    background: #e91e63;
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(20,20,20,.7);
+    backdrop-filter: blur(10px);
+}
+
+footer a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Animation */
+
+.schedule-hero,
+.schedule-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.loaded .schedule-hero,
+.loaded .schedule-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+

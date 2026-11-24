@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch Switch</title>
+
+    <link rel="stylesheet" href="css/Time.css">
+</head>
+<body>
+
+    <!-- MAIN BACKGROUND -->
+    <div class="bg-bomb">
+
+        <!-- MAIN CONTAINER -->
+        <div class="stopwatch-container">
+
+            <!-- RUNNING VIDEO AREA -->
+            <div class="runner-area">
+
+                <video
+                    id="runnerVideo"
+                    src="audioandimages/Running.mp4"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata">
+                </video>
+
+                <p id="runner-status">READY...</p>
+
+            </div>
+
+            <!-- STOPWATCH AREA -->
+            <div class="stopwatch">
+                <div id="display">00:00:00</div>
+            </div>
+
+        </div>
+
+        <!-- START / STOP SWITCH -->
+        <div class="switch" id="switch">
+            <div class="btn"></div>
+
+            <span class="bomb_on_status">START</span>
+            <span class="bomb_off_status">STOP</span>
+        </div>
+
+        <!-- RESET BUTTON -->
+        <button id="reset" type="button">RESET</button>
+
+    </div>
+
+    <!-- BUTTON SOUND -->
+    <audio
+        src="audioandimages/gago.mp3"
+        id="audio"
+        preload="auto">
+    </audio>
+
+    <!-- JAVASCRIPT -->
+    <script src="Time.js"></script>
+
+</body>
+</html>

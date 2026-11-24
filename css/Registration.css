@@ -1,0 +1,224 @@
+/* =========================
+   FORM PAGE
+========================= */
+
+.form-page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 60px;
+    position:relative;
+}
+
+.form-intro{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.kicker{
+    color:#7dd3fc;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    margin-bottom:10px;
+}
+
+.intro-title{
+    font-size:3rem;
+    color:#fff;
+    margin-bottom:10px;
+    text-shadow:0 4px 15px rgba(0,0,0,.5);
+}
+
+.hl{
+    color:#7dd3fc;
+}
+
+.intro-sub{
+    color:#e5e7eb;
+    font-size:1.1rem;
+}
+
+/* Glass Card */
+
+.form-card{
+    width:100%;
+    max-width:700px;
+    background:rgba(20,45,65,.85);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+
+/* Tabs */
+
+.tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.tab{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.tab:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.tab-active{
+    background:#4fc3f7;
+    color:#082032;
+}
+
+/* Form */
+
+.form-title{
+    color:#fff;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.form-row{
+    margin-bottom:20px;
+}
+
+.form-label{
+    display:block;
+    color:#f1f5f9;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-input{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.08);
+    color:white;
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
+}
+
+.form-input::placeholder{
+    color:#cbd5e1;
+}
+
+.form-input:focus{
+    border-color:#4fc3f7;
+    box-shadow:0 0 15px rgba(79,195,247,.4);
+}
+
+/* Choice Groups */
+
+.choice-group{
+    margin-bottom:20px;
+}
+
+.choice-title{
+    color:white;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.choice-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.choice-item{
+    color:#f8fafc;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* Button */
+
+.form-button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(
+        135deg,
+        #26495f,
+        #4fc3f7
+    );
+    color:white;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.form-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(79,195,247,.4);
+}
+
+/* Ghost Background Text */
+
+
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+}
+
+footer a{
+    color:#7dd3fc;
+    text-decoration:none;
+}
+
+footer p{
+    color:white;
+    margin-top:10px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .intro-title{
+        font-size:2rem;
+    }
+
+    .form-card{
+        padding:25px;
+    }
+
+    .choice-list{
+        flex-direction:column;
+    }
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important; 
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

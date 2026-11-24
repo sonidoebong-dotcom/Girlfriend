@@ -1,0 +1,307 @@
+
+/* ==============================
+   GENERAL RESET
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #101820;
+    overflow: hidden;
+}
+
+/* ==============================
+   MAIN BACKGROUND
+============================== */
+.bg-bomb {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        #101820,
+        #172b3a,
+        #203d50,
+        #101820
+    );
+    background-size: 300% 300%;
+    animation: backgroundMove 10s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==============================
+   STOPWATCH CONTAINER
+============================== */
+.stopwatch-container {
+    width: 90%;
+    max-width: 950px;
+    min-height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* ==============================
+   RUNNING PERSON AREA
+============================== */
+.runner-area {
+    width: 280px;
+    height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.runner {
+    font-size: 110px;
+    animation: runningAnimation 0.5s ease-in-out infinite alternate;
+}
+
+.runner-area p {
+    margin-top: 15px;
+    color: #00e5ff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+/* RUNNING ANIMATION */
+@keyframes runningAnimation {
+    from {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    to {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/* ==============================
+   STOPWATCH DISPLAY
+============================== */
+.stopwatch {
+    width: 350px;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(0, 229, 255, 0.5);
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 15px rgba(0, 229, 255, 0.2),
+        0 0 40px rgba(0, 229, 255, 0.1);
+}
+
+#display {
+    color: #00e5ff;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.7);
+    font-variant-numeric: tabular-nums;
+}
+
+/* ==============================
+   START / STOP SWITCH
+============================== */
+.switch {
+    position: relative;
+    width: 180px;
+    height: 65px;
+
+    background: #263746;
+    border: 2px solid #536879;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.switch span {
+    z-index: 2;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+}
+
+.bomb_on_status {
+    color: #00ff88 !important;
+}
+
+.bomb_off_status {
+    color: #ff5252 !important;
+}
+
+/* SWITCH BUTTON */
+.btn {
+    position: absolute;
+    left: 5px;
+    width: 75px;
+    height: 49px;
+
+    background: linear-gradient(
+        135deg,
+        #00e5ff,
+        #0077ff
+    );
+
+    border-radius: 50px;
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* ==============================
+   RESET BUTTON
+============================== */
+#reset {
+    padding: 13px 35px;
+
+    background: linear-gradient(
+        135deg,
+        #ff5252,
+        #d50000
+    );
+
+    color: white;
+    border: none;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+#reset:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+}
+
+#reset:active {
+    transform: scale(0.95);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 700px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .bg-bomb {
+        padding: 35px 15px;
+        min-height: 100vh;
+    }
+
+    .stopwatch-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .runner-area {
+        width: 220px;
+        height: 220px;
+    }
+
+    .runner {
+        font-size: 85px;
+    }
+
+    .stopwatch {
+        width: 100%;
+        max-width: 320px;
+        min-height: 130px;
+    }
+
+    #display {
+        font-size: 38px;
+    }
+}
+
+
+/* RUNNING VIDEO AREA */
+.runner-area {
+    width: 350px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 15px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* VIDEO */
+#runnerVideo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* VIDEO STATUS */
+#runner-status {
+    color: #00e5ff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
